@@ -5,11 +5,7 @@ from django.db import models
 
 
 class User(AbstractUser):
-    """
-    Custom user model. Every account is either a RIDER or a DRIVER.
-    We extend AbstractUser instead of the default User so we can add
-    role + phone_number, which the whole app depends on.
-    """
+   
 
     class Role(models.TextChoices):
         RIDER = "RIDER", "Rider"
